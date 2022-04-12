@@ -24,7 +24,7 @@ require_once '../../includes/doctor/slidebar.php';
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach (get_all_out_patients() as $out_patient){ ?>
+                        <?php foreach (get_out_patients_by_doctor_id($_SESSION['doctor']['doctor_id']) as $out_patient){ ?>
                         <tr>
                             <th><?= $out_patient['out_patient_id'] ?> </th>
                             <th><?= $out_patient['out_prescrip_id'] ?> </th>
